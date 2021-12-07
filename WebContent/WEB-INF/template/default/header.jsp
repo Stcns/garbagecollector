@@ -77,6 +77,7 @@
                 <li class="nav-item"><a class="nav-link" href="boardList">자유게시판</a></li>
                 <li class="nav-item"><a class="nav-link" href="rangkingList">순위(뱃지,걸음수)</a></li>
                 <li class="nav-item"><a class="nav-link" href="schedule">전국 플로깅 현황</a></li>
+                <li class="nav-item"><a class="nav-link" href="galleryList">깅스타그램</a></li>
               </ul>
             </div>
           </li>
