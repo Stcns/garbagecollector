@@ -30657,6 +30657,7 @@ div.tagsinput span.tag a {
 
 
 /*---------------명건희 Css 시작 (gallerylist)----------------------*/
+	/* Gallery list페이지 css 시작*/
 #galleryImgOne{
 width: 400px;
 height: 600px;
@@ -30678,12 +30679,162 @@ height:100%;
 width: 100%;
 height:450px;
 border-radius:20px 20px 0px 0px;
+margin-bottom: 5px;
+}
 
+#galleryImgDiv {
+width: 100%;
+height:450px;
+border-radius:20px 20px 0px 0px;
+margin-bottom: 5px;
+position: relative;
 }
 
 #galleryImgOne p{
 width: 385px;
+margin-left: 5px;
+font-family: inherit;
+font-size: 13px;
+color: #5D5D5D;
+}
+
+#galleryImgOne h5{
+width: 385px;
+margin-left: 5px;
 margin-top: 5px;
+font-family: inherit;
+font-weight: bold;
+color: #5D5D5D;	
+}
+
+.heartbutton {
+position: absolute;
+left: 350px;
+top: 550px;
+width: 20px;
+height: 20px;
+background-color: #FFA7A7;
+transform: rotate(45deg);
+
+}
+
+.heartbutton::before{
+content: "";
+width: 20px;
+height: 20px;
+position: absolute;
+left:-10px;
+background-color: #FFA7A7;
+border-radius: 25px 0 0 25px;
+}
+
+.heartbutton::after{
+content: "";
+width: 20px;
+height: 20px;
+position: absolute;	
+top:-10px;
+background-color: #FFA7A7;
+border-radius: 25px 25px 0 0 ;	
+}
+
+.heartbutton:hover{
+cursor: pointer;
+background-color: #FF5A5A;
+}
+
+.heartbutton:hover:after{
+cursor: pointer;
+background-color: #FF5A5A;
+}
+
+.heartbutton:hover:before{
+cursor: pointer;
+background-color: #FF5A5A;
+}
+
+.heartbutton:active{
+background-color: red;
+}
+.heartbutton:active:after{
+background-color: red;
+}
+.heartbutton:active:before{
+background-color: red;
+}
+
+
+.GalleryUpForm{
+width: 100%;
+height: 450px;
+
+}
+
+.GalleryUpFormInner {
+
+width: 50%;
+height:325px;
+margin-left: 25%;
+margin-top: 50px;
+font-weight: bold;
+background-color: #F6F6F6;
+}
+
+.GalleryUpFormInner input[type=text]{
+width: 100%;
+border: 3px solid #F6F6F6;
+}
+
+.GalleryUpFormInner input[type=submit]{
+width: 100%;
+height: 30px;
+border: 0;
+background-color: #D5D5D5;
+margin-top: 5px;
+}
+
+.GalleryUpFormInner textarea{
+width: 100%;
+border: 3px solid #F6F6F6;
+border-bottom: 0px;
+margin-bottom: -2px;
+}
+	/* Gallery list페이지 css 끝*/
+
+
+
+
+	/* Gallery detail페이지 css 시작*/
+#galleryDetailImgOne{
+width: 500px;
+height: 800px;
+border: 2px solid silver;
+float: left;	
+text-align: left;
+background-color: #F6F6F6;
+}
+
+#galleryDetailImgTotal{
+width: 1500px;
+margin-left: 50px;
+}
+
+#galleryDetailImgOne img{
+width: 100%;
+height:100%;
+margin-bottom: 5px;
+}
+
+#galleryDetailImgDiv {
+width: 100%;
+height:70%;
+border-radius:20px 20px 0px 0px;
+margin-bottom: 5px;
+position: relative;
+}
+
+#galleryDetailImgOne p{
+width: 385px;
 margin-left: 5px;
 font-family: inherit;
 font-weight: bold;
@@ -30691,10 +30842,141 @@ font-size: 15px;
 color: #5D5D5D;
 }
 
-#galleryImgOne input{
-margin-bottom: 5px;
+#galleryDetailImgOne h5{
+width: 385px;
+margin-left: 5px;
+font-family: inherit;
+font-weight: bold;
+font-size: 20px;
+color: #5D5D5D;	
+margin-top: 5px;
+}	
+	
+#detailTable{
+width: 65%;
+height: 800px;
+float: left;
+
+}
+
+#detailTableBody {
+margin-left:100px;
+width: 800px;
+height: 800px;
+}
+
+#profileImgdiv{
+width: 80px;
+height: 80px;
+margin-left: 200px;
+}
+
+#profileImgdiv img{
+border-radius: 85px 85px 85px 85px;
+width: 80px;
+mar
+}
+
+#detailTable h1{
+margin-left: 300px;
+margin-top: -70px;
+}
+
+.detailrightDiv{
+border: 3px solid #F6F6F6;
+border-radius: 25px 25px 25px 25px;
+width: 600px;
+height: 600px;
+margin-left: 100px;
+margin-top: 50px;
+padding: 20px 20px 20px 20px;
+position: relative;
+}
+
+.detailrightDiv label{
+font-size: 30px;
+font-weight: bold;
+text-decoration: underline;
+color: #5D5D5D;
+}
+
+.detailrightDiv p{
+font-size: 20px;
+}
+
+
+
+#buttonDiv {
+margin-left: 300px;
+margin-top:30px;
+width: 300px;
+
+}
+
+#buttonDiv button{
+height: 50px;
+width: 100px;
+border-radius: 85px 85px 85px 85px;
+margin-left: 10px;
+margin-top:300px;
+font-size: 12px;
+background-color: #F2FFED;
+font-weight: bold;
+}
+
+#galleryNumber{
+font-size: 20px;
+
+}
+
+#galleryDateHitLike{
+font-size: 20px;	
+margin-left: 45px;
+position: absolute;
+margin-top: 250px;
+}
+
+#bottomLine{
+margin-top: 210px;
+position: absolute;
+border: 2px solid black;
+width: 530px;
+text-align: right;
+vertical-align: middle;
+border-left: none;
+border-top: none;
+border-right: none;
+border-bottom-color: #BDBDBD;
+}
+
+#likeNum{
+position: absolute;
+margin-left: 310px;
+margin-top: -2px;
+
+}
+
+#hashtag{
+position: absolute;
+margin-top: 100px;
 margin-left: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+	/* Gallery detail페이지 css 끝*/
+
+
+
+
 
 
 
