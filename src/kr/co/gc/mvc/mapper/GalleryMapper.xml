@@ -4,15 +4,15 @@
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  <mapper namespace="gallery">
  <insert id="addGallery" parameterType="Gdto">
- 	insert into gallery values(gallery_seq.nextVal,#{Gwriter},#{Gfile},#{Gtitle},#{Gtext},sysdate,0,0)
+ 	insert into gallery values(gallery_seq.nextVal,#{gwriter},#{gfile},#{gtitle},#{gtext},sysdate,0,0,#{hashtag})
  </insert>
  
  <select id="listGallery" resultType="Gdto">
- select gno, gfile, gtitle, gtext, ghit, glike from gallery order by 1 desc
+ select gno, gfile, gtitle, gtext, ghit, glike, hashtag from gallery order by 1 desc
  </select>
  
  <select id="detailGallery" parameterType="int" resultType="Gdto">
- select gno, gwriter, gfile, gtitle, gtext, gdate, ghit, glike from gallery where gno=#{gno}
+ select gno, gwriter, gfile, gtitle, gtext, gdate, ghit, glike, hashtag from gallery where gno=#{gno}
  </select>
  
  <update id="updateGallery" parameterType="Gdto">
@@ -25,6 +25,10 @@
  
  <update id="updateLike" parameterType="Gdto">
  update gallery set glike=glike+1 where gno=#{gno}
+ </update>
+ 
+ <update id="updateHit" parameterType="int">
+ update gallery set ghit = ghit+1 where gno=#{gno}
  </update>
  
  </mapper>

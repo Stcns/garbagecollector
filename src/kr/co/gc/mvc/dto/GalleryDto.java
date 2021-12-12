@@ -9,7 +9,14 @@ private String gtext;
 private String gdate;
 private int ghit;
 private int glike;
+private String hashtag;
 
+public String getHashtag() {
+	return hashtag;
+}
+public void setHashtag(String hashtag) {
+	this.hashtag = hashtag;
+}
 public int getGno() {
 	return gno;
 }

@@ -41,8 +41,13 @@ public class GalleryDaoImple implements GalleryDaoInter{
 	}
 
 	@Override
-	public void likeUpdate(GalleryDto dto) {
-		ss.update("gallery.updateLike",dto);
+	public void likeUpdate(int gno) {
+		ss.update("gallery.updateLike",gno);
+	}
+
+	@Override
+	public void updateHit(int gno) {
+		ss.update("gallery.updateHit",gno);		
 	}
 	
 	

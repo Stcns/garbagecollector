@@ -10,5 +10,6 @@ public List<GalleryDto> getlist();
 public GalleryDto getDetail(int gno);
 public void update(GalleryDto dto);
 public void delete(GalleryDto dto);
-public void likeUpdate(GalleryDto dto);
+public void likeUpdate(int gno);
+public void updateHit(int gno);
 }

@@ -37,13 +37,16 @@ public class GalleryController {
 	@PostMapping("/galleryInsert")
 	public String galleryInsert(GalleryDto dto) {
 		galleryDaoInter.addUP(dto);
-		return "gallery/gallerylist";	
+		return "redirect:/galleryList";	
 	}
 	
 	@GetMapping("/gallerydetail")
 	public String updetailList(Model m, int gno) {
+		
 		GalleryDto dto = galleryDaoInter.getDetail(gno);
+		
 		m.addAttribute("dto", dto);
+		galleryDaoInter.updateHit(gno);
 		return "gallery/gallerydetail";
 	}
 	
@@ -66,9 +69,13 @@ public class GalleryController {
 		return "redirect:/galleryList";
 	}
 	
-	@GetMapping("/galleryLike")
-	public String updateLike(GalleryDto dto) {
-		galleryDaoInter.likeUpdate(dto);
+	@PostMapping(value = "/galleryLike")
+	public String updateLike(String gno) {
+		int intGno = Integer.parseInt(gno);
+		System.out.println("intGno:"+intGno);
+		System.out.println("galleryLike가 호출됨");
+		galleryDaoInter.likeUpdate(intGno);
+		System.out.println("여기도");
 		return "redirect:/galleryList";
 	}
 }
