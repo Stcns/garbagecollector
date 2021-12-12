@@ -16,7 +16,7 @@
  </select>
  
  <update id="updateGallery" parameterType="Gdto">
- update gallery set gfile=#{gfile}, gwriter=#{gwriter}, gtitle=#{gtitle}, gtext=#{gtext} where gno=#{gno}
+ update gallery set gfile=#{gfile}, gwriter=#{gwriter}, gtitle=#{gtitle}, gtext=#{gtext}, hashtag=#{hashtag} where gno=#{gno}
  </update>
  
  <delete id="deleteGallery" parameterType="Gdto">
