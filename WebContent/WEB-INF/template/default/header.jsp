@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
    pageEncoding="EUC-KR"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var="urlPath" value="${pageContext.request.contextPath }/resources"/>
 
 <!-- Header Section Begin -->
 <div class="container-scroller">
@@ -13,22 +14,36 @@
         </button>
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item nav-profile dropdown">
+            <c:choose>
+            <c:when test="${sessionScope.sessionID != null }">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="${urlPath}/imgfiles/${sessionScope.sessionPhoto}" alt="profile"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="logoutProcess">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+              <a class="dropdown-item" href="modify_permission">
+                <i class="ti-power-off text-primary"></i>
+                MyPage
+              </a>
+            </c:when>
+            <c:when test="${sessionScope.sessionID == null }">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
               <img src="resources/images/faces/face28.jpg" alt="profile"/>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item">
-                <i class="ti-power-off text-primary"></i>
-                Logout
-              </a>
               <a class="dropdown-item" href="loginForm">
                 <i class="ti-power-off text-primary"></i>
                 Login
               </a>
-              <a class="dropdown-item" href="memberJoin">
+              <a class="dropdown-item" href="memberJoinForm">
                 <i class="ti-user text-primary"></i>
                 Join
               </a>
+            </c:when>
+            </c:choose>
             </div>
           </li>
           <li class="nav-item nav-settings d-none d-lg-flex">
@@ -61,8 +76,16 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
+                <c:choose>
+                <c:when test="${sessionScope.sessionID == null }"> 
+                <li class="nav-item"> <a class="nav-link" href="loginForm" onclick="alert('로그인이 필요합니다.')">운동량/봉사량</a></li>
+                <li class="nav-item"> <a class="nav-link" href="loginForm" onclick="alert('로그인이 필요합니다.')">마이페이지</a></li>
+                </c:when>
+                <c:when test="${sessionScope.sessionID != null }"> 
                 <li class="nav-item"> <a class="nav-link" href="myInfomation">운동량/봉사량</a></li>
-                <li class="nav-item"> <a class="nav-link" href="userPage">마이페이지</a></li>
+                <li class="nav-item"> <a class="nav-link" href="modify_permission">마이페이지</a></li>
+                </c:when>
+                </c:choose>
               </ul>
             </div>
           </li>
@@ -75,7 +98,7 @@
             <div class="collapse" id="form-elements">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"><a class="nav-link" href="boardList">자유게시판</a></li>
-                <li class="nav-item"><a class="nav-link" href="rangkingList">순위(뱃지,걸음수)</a></li>
+                <li class="nav-item"><a class="nav-link" href="rankingList">순위(뱃지,걸음수)</a></li>
                 <li class="nav-item"><a class="nav-link" href="schedule">전국 플로깅 현황</a></li>
               </ul>
             </div>

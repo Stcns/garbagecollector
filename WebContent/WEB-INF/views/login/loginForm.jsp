@@ -8,12 +8,12 @@
 	          <div class="col-lg-4 mx-auto">
 	            <div class="auth-form-light text-left py-5 px-4 px-sm-5">
 	              <h4>Hello! let's get started</h4>
-	              <form class="pt-3" method="post" action="">
+	              <form class="pt-3" method="post" action="loginProcess">
 	                <div class="form-group">
-	                  <input type="text" class="form-control form-control-lg" id="mid" placeholder="UserID">
+	                  <input type="text" class="form-control form-control-lg" id="mid" name="mid" placeholder="UserID">
 	                </div>
 	                <div class="form-group">
-	                  <input type="password" class="form-control form-control-lg" id="mpwd" placeholder="Password">
+	                  <input type="password" class="form-control form-control-lg" id="mpwd" name="mpwd" placeholder="Password">
 	                </div>
 	                <div class="mt-3">
 	                  <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="SING IN">

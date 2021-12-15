@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="resources/css/vertical-layout-light/style.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="resources/images/favicon.png" /> <!-- 파비콘 바꿔야함 -->
-</head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 	<tiles:insertAttribute name="header" />
