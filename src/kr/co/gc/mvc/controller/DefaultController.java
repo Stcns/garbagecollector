@@ -18,9 +18,9 @@ public class DefaultController {
 	public String myInfomation() {
 		return "analytics/myInfomation";
 	}
-	@RequestMapping("/rangkingList")
-	public String rangkingList() {
-		return "analytics/rangkingList";
+	@RequestMapping("/rankingList")
+	public String rankingList() {
+		return "analytics/rankingList";
 	}
 	// analytics end
 	
@@ -32,10 +32,10 @@ public class DefaultController {
 	// board end
 	
 	//login start
-	@RequestMapping("/loginForm")
-	public String loginForm() {
-		return "login/loginForm";
-	}
+//	@RequestMapping("/loginForm")
+//	public String loginForm() {
+//		return "login/loginForm";
+//	}
 	//login end
 	
 	//news start
@@ -53,17 +53,15 @@ public class DefaultController {
 	//schedule end
 		
 	//user start
-	@RequestMapping("/memberJoin")
-	public String memberJoin() {
-		return "user/memberJoin";
-	}
-	@RequestMapping("/userPage")
-	public String userPage() {
-		return "user/userPage";
-	}
+//	@RequestMapping("/memberJoin")
+//	public String memberJoin() {
+//		return "user/memberJoin";
+//	}
+//	@RequestMapping("/userPage")
+//	public String userPage() {
+//		return "member/userPage";
+//	}
 	//user end
-	
-	
 	
 	
 	
